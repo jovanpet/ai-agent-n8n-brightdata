@@ -13,4 +13,10 @@ export const healthCheck = () => api.get('/health');
 export const getHello = () => api.get('/hello');
 export const postEcho = (data: any) => api.post('/echo', data);
 
+export const processArticle = (data: {
+  companyDomain: string;
+  articleTitle: string;
+  article: string;
+}) => api.post('/process-article', data);
+
 export default api;
